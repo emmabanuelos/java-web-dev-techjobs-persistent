@@ -14,7 +14,7 @@ public abstract class AbstractEntity {
     @GeneratedValue
     private int id;
 
-    @NotBlank
+    @NotBlank(message = "Don't leave blank please.")
     @Size (min=1, max=100)
     private String name;
 
