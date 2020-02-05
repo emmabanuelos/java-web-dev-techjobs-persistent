@@ -36,6 +36,7 @@ public class SkillController {
         }
 
         skillRepository.save(newSkill);
+        model.addAttribute("skills",skillRepository.findAll());
         return "redirect:";
     }
 
