@@ -13,7 +13,7 @@ Drop table  job
 
 
 ## Part 4: Test it with SQL
-SELECT name, description
-FROM techjobs.skill
-WHERE id
+SELECT distinct name, description From Skill
+Inner join job_skills on skill.id = job_skills.skills_is
+WHERE jobs_id IS NOT NULL
 ORDER BY name ASC;

@@ -35,7 +35,8 @@ public class HomeController {
     public String index(Model model) {
 
         model.addAttribute("title", "My Jobs");
-        model.addAttribute("employerId", employerRepository);
+//        model.addAttribute("employerId", employerRepository);
+        model.addAttribute("jobs", jobRepository.findAll());
 
         return "index";
     }
@@ -43,8 +44,9 @@ public class HomeController {
     @GetMapping("add")
     public String displayAddJobForm(Model model) {
         model.addAttribute("title", "Add Job");
-        model.addAttribute("employerId", employerRepository);
+//        model.addAttribute("employerId", employerRepository);
         model.addAttribute("skills", skillRepository.findAll());
+        model.addAttribute("employers", employerRepository.findAll());
         model.addAttribute(new Job());
         return "add";
     }

@@ -10,11 +10,11 @@ import java.util.List;
 public class Job extends AbstractEntity{
 
     @ManyToOne
-    @NotNull(message = "Please select an Employer.")
+    //@NotNull(message = "Please select an Employer.")
     private Employer employer;
 
     @ManyToMany
-    @NotNull(message = "Please select a skill.")
+    //@NotNull(message = "Please select a skill.")
     private List<Skill> skills = new ArrayList<>();
 
     public Job() {

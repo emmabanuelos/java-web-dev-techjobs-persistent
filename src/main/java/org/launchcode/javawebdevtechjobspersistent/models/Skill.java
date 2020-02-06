@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
-    @Size (min = 100, max = 500)
+    @Size (min = 10, max = 500)
     @NotBlank(message="Please put something here")
     private String description;
 
@@ -26,5 +26,13 @@ public class Skill extends AbstractEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 }
