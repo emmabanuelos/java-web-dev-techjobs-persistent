@@ -9,7 +9,11 @@ WHERE location = "St. Louis City";
 
 
 ## Part 3: Test it with SQL
---Drop Job table
+Drop table  job
 
 
 ## Part 4: Test it with SQL
+SELECT name, description
+FROM techjobs.skill
+WHERE id
+ORDER BY name ASC;

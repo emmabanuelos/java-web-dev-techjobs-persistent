@@ -44,6 +44,7 @@ public class HomeController {
     public String displayAddJobForm(Model model) {
         model.addAttribute("title", "Add Job");
         model.addAttribute("employerId", employerRepository);
+        model.addAttribute("skills", skillRepository.findAll());
         model.addAttribute(new Job());
         return "add";
     }
@@ -54,8 +55,8 @@ public class HomeController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Job");
-            model.addAttribute("employerId", employerRepository);
-            model.addAttribute("skills", skillRepository.findAll());
+//            model.addAttribute("employerId", employerRepository);
+//            model.addAttribute("skills", skillRepository.findAll());
             return "add";
         }
 
@@ -80,7 +81,7 @@ public class HomeController {
             model.addAttribute("job", job);
             return "view";
         } else {
-            return "redirect:../";
+            return "redirect:/";
         }
     }
 
